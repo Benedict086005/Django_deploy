@@ -5,11 +5,11 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "staticfiles_build",
-        "runtime": "python3.9" // Update Python version if needed
+        "runtime": "python3.9"
       }
     },
     {
-      "src": "/path/to/your/wsgi.py", // Update the path to your WSGI file
+      "src": "/my_app/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb"
@@ -19,7 +19,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/path/to/your/wsgi.py" // Update the path to your WSGI file
+      "dest": "my_app/wsgi.py"
     },
     {
       "src": "/static/(.*)",
